@@ -1,7 +1,8 @@
 abstract class Mycolors {
-    public static primary = "#A03C78";
-    public static secondary = "#ED8E7C";
-    public static three = "#CDF3A2";
-    public static four = "#93D9A3";
+    public static primary = "#F0D9E7";
+    public static secondary = "#FF94CC";
+    public static three = "#A239EA";
+    public static four = "#F38BA0";
+    public static five = "#5C33F6";
    }
    export default Mycolors;

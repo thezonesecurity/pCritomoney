@@ -1,35 +1,35 @@
 import React, {Component} from "react";
 import {getFocusedRouteNameFromRoute, NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import Clients from "./src/screens/clients";
-import Reports from "./src/screens/reports";
-import Order from "./src/screens/order";
+import Change from "./src/screens/change";
+import Detaild from "./src/screens/detaild";
 import Icons from "react-native-vector-icons/AntDesign";
+import FontAwesomeIcons from "react-native-vector-icons/FontAwesome";
 import Mycolors from "./src/colors/mycolors";
 const Tab = createBottomTabNavigator();
+//26:00 video 3
 class App extends Component {
   render() {
     return (
       <NavigationContainer>
-
 
         <Tab.Navigator
           screenOptions={({route}) => ({
             tabBarIcon: ({focused, color, size}) => {
               let iconName;
               switch (route.name) {
-                case 'Clientes': {
+                case 'Change': {
                   if (focused) {
                     return (
-                      <Icons name="team" size={23} color={Mycolors.secondary} />
+                      <FontAwesomeIcons name="bitcoin" size={23} color={Mycolors.secondary} />
                     );
                   } else {
                     return (
-                      <Icons name="team" size={23} color={Mycolors.three} />
+                      <FontAwesomeIcons name="bitcoin" size={23} color={Mycolors.three} />
                     );
                   }
                 }
-                case 'Pedidos': {
+                case 'Detaild': {
                   if (focused) {
                     return (
                       <Icons name="form" size={23} color={Mycolors.secondary} />
@@ -40,25 +40,13 @@ class App extends Component {
                     );
                   }
                 }
-                case 'Reportes': {
-                  if (focused) {
-                    return (
-                      <Icons name="switcher" size={23} color={Mycolors.secondary} />
-                    );
-                  } else {
-                    return (
-                      <Icons name="switcher" size={23} color={Mycolors.three} />
-                    );
-                  }
-                }
 
               }
             },
           })}
         >
-          <Tab.Screen name="Clientes" component={Clients} />
-          <Tab.Screen name="Pedidos" component={Order} />
-          <Tab.Screen name="Reportes" component={Reports} />
+          <Tab.Screen name="Change" component={Change} />
+          <Tab.Screen name="Detaild" component={Detaild} />
         </Tab.Navigator>
       </NavigationContainer>
     )
