@@ -15,3 +15,6 @@ para los pick -> https://github.com/react-native-picker/picker
 para axios
     npm install axios
     npm install @types/axios
+para la navegacion
+    npm install react-navigation
+

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {getFocusedRouteNameFromRoute, NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import Change from "./src/screens/change";
+import mainChange from "./src/screens/mainChange";
 import Detaild from "./src/screens/detaild";
 import Icons from "react-native-vector-icons/AntDesign";
 import FontAwesomeIcons from "react-native-vector-icons/FontAwesome";
@@ -11,9 +12,9 @@ const Tab = createBottomTabNavigator();
 class App extends Component {
   render() {
     return (
-      <NavigationContainer>
+      <NavigationContainer independent= {true} >
 
-        <Tab.Navigator
+        <Tab.Navigator 
           screenOptions={({route}) => ({
             tabBarIcon: ({focused, color, size}) => {
               let iconName;
